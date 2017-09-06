@@ -1,2 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!-- Fire Lion -->
+    <string name="fire_lion_element">Fire</string>
+    <string name="fire_lion_power">220</string>
+    <string name="fire_lion_life">50</string>
+    <string name="fire_lion_speed">175</string>
+    <string name="fire_lion_stamina">100</string>
+
+    <!-- Panda -->
+    <string name="panda_element">Nature</string>
+    <string name="panda_power">190</string>
+    <string name="panda_life">56</string>
+    <string name="panda_speed">200</string>
+    <string name="panda_stamina">100</string>
+
+    <!-- Rockilla -->
+    <string name="rockilla_element">Earth</string>
+    <string name="rockilla_power">175</string>
+    <string name="rockilla_life">71-</string>
+    <string name="rockilla_speed">175</string>
+    <string name="rockilla_stamina">100</string>
+
+    <!-- Thunder Eagle -->
+    <string name="thunder_eagle_element">Thunder</string>
+    <string name="thunder_eagle_power">175</string>
+    <string name="thunder_eagle_life">50</string>
+    <string name="thunder_eagle_speed">250</string>
+    <string name="thunder_eagle_stamina">100</string>
+
+    <!-- Mersnake -->
+    <string name="mersnake_element">Water</string>
+    <string name="mersnake_power">225</string>
+    <string name="mersnake_life">56</string>
+    <string name="mersnake_speed">200</string>
+    <string name="mersnake_stamina">100</string>
+
+    <!-- Tyrannoking -->
+    <string name="tyrannoking_element">Dark</string>
+    <string name="tyrannoking_power">230</string>
+    <string name="tyrannoking_life">50</string>
+    <string name="tyrannoking_speed">175</string>
+    <string name="tyrannoking_stamina">100</string>
+
+    <!-- Geni -->
+    <string name="geni_element">Magic</string>
+    <string name="geni_power">190</string>
+    <string name="geni_life">50</string>
+    <string name="geni_speed">250</string>
+    <string name="geni_stamina">100</string>
+
+    <!-- Light Spirit -->
+    <string name="light_spirit_element">Light</string>
+    <string name="light_spirit_power">175</string>
+    <string name="light_spirit_life">71</string>
+    <string name="light_spirit_speed">175</string>
+    <string name="light_spirit_stamina">100</string>
+
+    <!-- Arch Knight -->
+    <string name="arch_knight_element">Legend</string>
+    <string name="arch_knight_power">200</string>
+    <string name="arch_knight_life">56</string>
+    <string name="arch_knight_speed">200</string>
+    <string name="arch_knight_stamina">100</string>
+
+    <!-- Metalsaur -->
+    <string name="metalsaur_element">Metal</string>
+    <string name="metalsaur_power">224</string>
+    <string name="metalsaur_life">60</string>
+    <string name="metalsaur_speed">200</string>
+    <string name="metalsaur_stamina">100</string>
+</resources>
