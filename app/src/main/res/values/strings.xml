@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MonsterAndCie</string>
+    <string name="elementType">Type d\'élément</string>
+    <string name="stats">Caractéristiques</string>
 </resources>
