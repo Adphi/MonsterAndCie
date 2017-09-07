@@ -1,4 +1,5 @@
 package be.heroesofmightandmagic.www.monsterandcie;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +13,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button button = (Button) findViewById(R.id.button);
 
+        String monsterName = "fire_lion";
+
+        String text = getResources().getString(getResources().getIdentifier(monsterName + "_element", "string", getPackageName()));
+
+        final Button button = (Button) findViewById(R.id.button);
+        button.setText(text);
         final Intent intent = new Intent(this, DetailsActivity.class);
 
         button.setOnClickListener(new View.OnClickListener() {

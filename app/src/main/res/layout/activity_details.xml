@@ -165,15 +165,15 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/arch_knight_egg"/>
+                android:src="@drawable/arch_knight_evol1"/>
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/arch_knight_egg"/>
+                android:src="@drawable/arch_knight_evol2"/>
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/arch_knight_egg"/>
+                android:src="@drawable/arch_knight_evol3"/>
 
         </LinearLayout>
 
