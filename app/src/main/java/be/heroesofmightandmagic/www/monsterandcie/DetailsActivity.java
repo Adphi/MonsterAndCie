@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static be.heroesofmightandmagic.www.monsterandcie.R.id.elementTypeLabel;
 import static be.heroesofmightandmagic.www.monsterandcie.R.id.imageView;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -77,6 +78,23 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
+        // Get the Element
+
+        // String test = "Prout";
+        // test = test.toLowerCase()
+
+        ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
+
+
+        String elementRessourceName = monsterName + "_element";
+        elementRessourceName = elementRessourceName.toLowerCase();
+        int elementRessourceId = getResources().getIdentifier(elementRessourceName, "drawable", getPackageName());
+        Drawable elementImage = getResources().getDrawable(elementRessourceId, getTheme());
+        elementImageView.setImageDrawable(elementImage);
+
+
+
+
 
 
         // Get the textview
@@ -107,9 +125,12 @@ public class DetailsActivity extends AppCompatActivity {
         staminaTextView.setText(staminaText);
 
 
-        // Get the Element
 
-        
+
+
+
+
+
 
 
 
