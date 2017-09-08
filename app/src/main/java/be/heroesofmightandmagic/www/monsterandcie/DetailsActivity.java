@@ -75,9 +75,45 @@ public class DetailsActivity extends AppCompatActivity {
         Drawable evol3Image = getResources().getDrawable(evol3RessourceId, getTheme());
         evol3ImageView.setImageDrawable(evol3Image);
 
+
+
+
+
         // Get the textview
 
+        TextView powerTextView = (TextView) findViewById(R.id.powerLevelLabel);
+        TextView lifeTextView = (TextView) findViewById(R.id.lifeLevelLabel);
+        TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
+        TextView staminaTextView = (TextView) findViewById(R.id.staminaLevelLabel);
+
+        String powerRessourceName = monsterName + "_power";
+        int powerRessourceId = getResources().getIdentifier(powerRessourceName, "string", getPackageName());
+        String powerText = getResources().getString(powerRessourceId);
+        powerTextView.setText(powerText);
+
+        String lifeRessourceName = monsterName + "_life";
+        int lifeRessourceId = getResources().getIdentifier(lifeRessourceName, "string", getPackageName());
+        String lifeText = getResources().getString(lifeRessourceId);
+        lifeTextView.setText(powerText);
+
+        String speedRessourceName = monsterName + "_speed";
+        int speedRessourceId = getResources().getIdentifier(speedRessourceName, "string", getPackageName());
+        String speedText = getResources().getString(speedRessourceId);
+        speedTextView.setText(speedText);
+
+        String staminaRessourceName = monsterName + "_stamina";
+        int staminaRessourceId = getResources().getIdentifier(staminaRessourceName, "string", getPackageName());
+        String staminaText = getResources().getString(staminaRessourceId);
+        staminaTextView.setText(staminaText);
+
+
+        // Get the Element
+
         
+
+
+
+
 
 
 
