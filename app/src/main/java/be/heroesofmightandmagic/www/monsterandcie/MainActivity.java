@@ -2,7 +2,7 @@ package be.heroesofmightandmagic.www.monsterandcie;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         String monsterName = "fire_lion";
 
-        String text = getResources().getString(getResources().getIdentifier(monsterName + "_element", "string", getPackageName()));
+
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         // use this setting to improve performance if you know that changes
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
 
         // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
+        mLayoutManager = new GridLayoutManager(this, 3);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(new MyAdapter());
         //final Intent intent = new Intent(this, DetailsActivity.class);
