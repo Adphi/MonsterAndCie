@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,6 +95,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             // Set the Image
             imageView.setImageDrawable(monsterImage);
+
+            String elementRessourseName = monsterName + "_element";
+            int elementNameID = itemView.getResources().getIdentifier(elementRessourseName,
+                    "string", context.getPackageName());
+            String elementName = itemView.getResources().getString(elementNameID);
+            String elementImageName = elementName.toLowerCase() + "_logo";
+            int elementLogoID = itemView.getResources().getIdentifier(elementImageName,
+                    "drawable", context.getPackageName());
+            Drawable elementImage = itemView.getResources().getDrawable(elementLogoID, context.getTheme());
+
+            ImageView elementImageView = itemView.findViewById(R.id.monsterElementImage);
+            elementImageView.setImageDrawable(elementImage);
         }
     }
     ;
