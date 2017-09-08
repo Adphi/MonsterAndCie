@@ -9,5 +9,12 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        // Get the Monster Name from the Extra Data of the Intent
+        String monsterName = getIntent().getStringExtra("monsterName");
+
+        // TODO: Set the Monster's Data in the Page
+        // 
+
     }
 }
