@@ -61,21 +61,20 @@ public class DetailsActivity extends AppCompatActivity {
         //Evol1
         String evol1RessourceName = monsterName + "_evol1";
         int evol1RessourceID = getResources().getIdentifier(evol1RessourceName, "drawable", getPackageName());
-        Drawable evol1Image = getResources().getDrawable(evol1RessourceID,getTheme());
+        Drawable evol1Image = getResources().getDrawable(evol1RessourceID, getTheme());
         evol1ImageView.setImageDrawable(evol1Image);
 
         //Evol2
         String evol2RessourceName = monsterName + "_evol2";
-        int evol2RessourceId = getResources().getIdentifier(evol2RessourceName,"drawable", getPackageName());
-        Drawable evol2Image = getResources().getDrawable(evol2RessourceId,getTheme());
+        int evol2RessourceId = getResources().getIdentifier(evol2RessourceName, "drawable", getPackageName());
+        Drawable evol2Image = getResources().getDrawable(evol2RessourceId, getTheme());
         evol2ImageView.setImageDrawable(evol2Image);
 
         //Evol3
         String evol3RessourceName = monsterName + "_evol3";
-        int evol3RessourceId = getResources().getIdentifier(evol3RessourceName,"drawable", getPackageName());
+        int evol3RessourceId = getResources().getIdentifier(evol3RessourceName, "drawable", getPackageName());
         Drawable evol3Image = getResources().getDrawable(evol3RessourceId, getTheme());
         evol3ImageView.setImageDrawable(evol3Image);
-
 
 
         // Get the Element
@@ -84,17 +83,19 @@ public class DetailsActivity extends AppCompatActivity {
         // test = test.toLowerCase()
 
         ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
+        TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
+
+        String elementRes = monsterName + "_element";
+        int elementId = getResources().getIdentifier(elementRes, "string", getPackageName());
+        String elementText = getResources().getString(elementId);
+        elementTextView.setText(elementText);
 
 
-        String elementRessourceName = monsterName + "_element";
-        elementRessourceName = elementRessourceName.toLowerCase();
+        String elementRessourceName = elementText;
+        elementRessourceName = elementRessourceName.toLowerCase() + "_logo";
         int elementRessourceId = getResources().getIdentifier(elementRessourceName, "drawable", getPackageName());
         Drawable elementImage = getResources().getDrawable(elementRessourceId, getTheme());
         elementImageView.setImageDrawable(elementImage);
-
-
-
-
 
 
         // Get the textview
@@ -123,19 +124,6 @@ public class DetailsActivity extends AppCompatActivity {
         int staminaRessourceId = getResources().getIdentifier(staminaRessourceName, "string", getPackageName());
         String staminaText = getResources().getString(staminaRessourceId);
         staminaTextView.setText(staminaText);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
