@@ -19,7 +19,9 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         // Get the Monster Name from the Extra Data of the Intent
-        String monsterName = getIntent().getStringExtra("monsterName");
+        String monsterNameFormated = getIntent().getStringExtra("monsterName");
+
+        String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
         // TODO: Set the Monster's Data in the Page
         // In order to get the resource we need to create
@@ -69,8 +71,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Get the Element
 
-        // String test = "Prout";
-        // test = test.toLowerCase()
+
 
         ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
         TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
@@ -92,6 +93,9 @@ public class DetailsActivity extends AppCompatActivity {
         TextView lifeTextView = (TextView) findViewById(R.id.lifeLevelLabel);
         TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
         TextView staminaTextView = (TextView) findViewById(R.id.staminaLevelLabel);
+        TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
+
+        monsterNameTextView.setText(monsterNameFormated);
 
 
         String powerText = Utils.getResourceStringByString(monsterName + "_power", getApplicationContext());

@@ -17,8 +17,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     // Create the list of the Monsters names
     private static final String[] monstersNameList =
-            {"fire_lion","panda","rockilla","thunder_eagle","mersnake",
-            "tyrannoking","geni","light_spirit","arch_knight","metalsaur"};
+            {"Fire Lion","Panda","Rockilla","Thunder Eagle","Mersnake",
+            "Tyrannoking","Geni","Light Spirit","Arch Knight","Metalsaur"};
 
 
     // We need to override this method to know the item's count
@@ -80,6 +80,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             // Add the Monster Name to the Details Activity
             intent.putExtra("monsterName", monsterName);
+
+            monsterName = monsterName.contains(" ") ? monsterName.replace(" ", "_").toLowerCase() : monsterName.toLowerCase();
 
             // In order to get the resource we need to create
             // the string for the name of the resource image
