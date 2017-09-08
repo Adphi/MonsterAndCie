@@ -30,7 +30,12 @@
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:scaleType="fitCenter"
-            tools:src="@drawable/arch_knight_evol1" />
+            tools:src="@drawable/arch_knight_evol1"
+            />
+        <ImageView
+            android:id="@+id/monsterElementImage"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
 
 
     </LinearLayout>
