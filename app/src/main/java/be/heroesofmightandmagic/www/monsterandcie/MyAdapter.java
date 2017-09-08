@@ -17,7 +17,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     // Create the list of the Monsters names
     private static final String[] monstersNameList =
-            {"fire_lion","panda","rockilla","thunder_eagle","mersnake","tyrannoking","geni","light_spirit","arch_knight","metalsaur"};
+            {"fire_lion","panda","rockilla","thunder_eagle","mersnake",
+            "tyrannoking","geni","light_spirit","arch_knight","metalsaur"};
 
 
     // We need to override this method to know the item's count
@@ -32,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.list_item, parent, false);
+        View view = inflater.inflate(R.layout.card_layout, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -47,8 +48,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     //
     public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        // Declaration of Context, ImageView, Intent (to launch
+        // the next Activity on Card Clicked)
         private final Context context;
         private final ImageView imageView;
+        private final Intent intent;
 
         // Constructor of the ViewHolder ()
         public MyViewHolder(View itemView) {
@@ -57,13 +62,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             context = itemView.getContext();
             // Get the Image View
             imageView = itemView.findViewById(R.id.monsterImage);
+            intent = new Intent(context, DetailsActivity.class);
 
             // Set the Click Listener on the Card to go the Details Avtivity
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    final Intent intent = new Intent(context, DetailsActivity.class);
-                    //intent.putExtra("data", articleData);
                     context.startActivity(intent);
                 }
             });
@@ -73,12 +77,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public void setData(int index){
             // Get the name of the Monster to display in the Card
             String monsterName = monstersNameList[index];
+
+            // Add the Monster Name to the Details Activity
+            intent.putExtra("monsterName", monsterName);
+
             // In order to get the resource we need to create
             // the string for the name of the resource image
             String monsterResourceName = monsterName + "_evol3";
 
             // Get the resource ID of the Image to Display
-            int monsterResourceId = itemView.getResources().getIdentifier(monsterResourceName, "drawable", context.getPackageName());
+            int monsterResourceId = itemView.getResources().getIdentifier(monsterResourceName,
+                    "drawable", context.getPackageName());
 
             // Get the Image from Resources with ID
             Drawable monsterImage = itemView.getResources().getDrawable(monsterResourceId, context.getTheme());
@@ -87,5 +96,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             imageView.setImageDrawable(monsterImage);
         }
     }
-;
+    ;
 }

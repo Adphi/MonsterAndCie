@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
@@ -16,23 +15,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        String monsterName = "fire_lion";
-
-
-
+        // Get the RecyclerView from Resource System
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
+
+        // Stuff from Android doc to improve performances
         mRecyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
+        // Create the Layout for the RecyclerView to display the Cards
+        // ... A Grid Layout, with 2 Columns
         mLayoutManager = new GridLayoutManager(this, 3);
         mRecyclerView.setLayoutManager(mLayoutManager);
+
+        // Set the Custom Adapter
         mRecyclerView.setAdapter(new MyAdapter());
-        //final Intent intent = new Intent(this, DetailsActivity.class);
-        //startActivity(intent);
-
-
     }
 }
