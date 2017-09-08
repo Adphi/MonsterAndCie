@@ -7,7 +7,7 @@
     android:layout_margin="5dp"
 
     app:cardBackgroundColor="@android:color/white"
-    app:cardCornerRadius="2dp"
+    app:cardCornerRadius="50dp"
     app:cardElevation="2dp">
 
     <!-- Les CardView possèdent des attributs supplémentaires dont
