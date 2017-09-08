@@ -17,7 +17,7 @@
     <!-- Rockilla -->
     <string name="rockilla_element">Earth</string>
     <string name="rockilla_power">175</string>
-    <string name="rockilla_life">71-</string>
+    <string name="rockilla_life">71</string>
     <string name="rockilla_speed">175</string>
     <string name="rockilla_stamina">100</string>
 

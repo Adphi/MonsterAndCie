@@ -47,33 +47,23 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView charLevelImageView = (ImageView) findViewById(R.id.characterLevelImage);
 
         //CharacterLevlImage
-        String charLevelRessourceName = monsterName + "_egg";
-        int charLevelRessourceId = getResources().getIdentifier(charLevelRessourceName, "drawable", getPackageName());
-        Drawable charLevelImage = getResources().getDrawable(charLevelRessourceId, getTheme());
+        Drawable charLevelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
         charLevelImageView.setImageDrawable(charLevelImage);
 
         // Egg
-        String evolEggRessourceName = monsterName + "_egg";
-        int evolEggRessourceId = getResources().getIdentifier(evolEggRessourceName, "drawable", getPackageName());
-        Drawable evolEggImage = getResources().getDrawable(evolEggRessourceId, getTheme());
+        Drawable evolEggImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
         evolEggImageView.setImageDrawable(evolEggImage);
 
         //Evol1
-        String evol1RessourceName = monsterName + "_evol1";
-        int evol1RessourceID = getResources().getIdentifier(evol1RessourceName, "drawable", getPackageName());
-        Drawable evol1Image = getResources().getDrawable(evol1RessourceID, getTheme());
+        Drawable evol1Image = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
         evol1ImageView.setImageDrawable(evol1Image);
 
         //Evol2
-        String evol2RessourceName = monsterName + "_evol2";
-        int evol2RessourceId = getResources().getIdentifier(evol2RessourceName, "drawable", getPackageName());
-        Drawable evol2Image = getResources().getDrawable(evol2RessourceId, getTheme());
+        Drawable evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
         evol2ImageView.setImageDrawable(evol2Image);
 
         //Evol3
-        String evol3RessourceName = monsterName + "_evol3";
-        int evol3RessourceId = getResources().getIdentifier(evol3RessourceName, "drawable", getPackageName());
-        Drawable evol3Image = getResources().getDrawable(evol3RessourceId, getTheme());
+        Drawable evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
         evol3ImageView.setImageDrawable(evol3Image);
 
 
@@ -85,10 +75,8 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
         TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
 
-        String elementRes = monsterName + "_element";
-        int elementId = getResources().getIdentifier(elementRes, "string", getPackageName());
-        String elementText = getResources().getString(elementId);
-        elementTextView.setText(elementText);
+        String elementText = Utils.getResourceStringByString(monsterName + "_element", getApplicationContext());
+        elementTextView.setText("Type : " + elementText);
 
 
         String elementRessourceName = elementText;
@@ -105,25 +93,18 @@ public class DetailsActivity extends AppCompatActivity {
         TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
         TextView staminaTextView = (TextView) findViewById(R.id.staminaLevelLabel);
 
-        String powerRessourceName = monsterName + "_power";
-        int powerRessourceId = getResources().getIdentifier(powerRessourceName, "string", getPackageName());
-        String powerText = getResources().getString(powerRessourceId);
-        powerTextView.setText(powerText);
 
-        String lifeRessourceName = monsterName + "_life";
-        int lifeRessourceId = getResources().getIdentifier(lifeRessourceName, "string", getPackageName());
-        String lifeText = getResources().getString(lifeRessourceId);
-        lifeTextView.setText(powerText);
+        String powerText = Utils.getResourceStringByString(monsterName + "_power", getApplicationContext());
+        powerTextView.setText("Power : " + powerText);
 
-        String speedRessourceName = monsterName + "_speed";
-        int speedRessourceId = getResources().getIdentifier(speedRessourceName, "string", getPackageName());
-        String speedText = getResources().getString(speedRessourceId);
-        speedTextView.setText(speedText);
+        String lifeText = Utils.getResourceStringByString(monsterName + "_life", getApplicationContext());
+        lifeTextView.setText("Life : " + lifeText);
 
-        String staminaRessourceName = monsterName + "_stamina";
-        int staminaRessourceId = getResources().getIdentifier(staminaRessourceName, "string", getPackageName());
-        String staminaText = getResources().getString(staminaRessourceId);
-        staminaTextView.setText(staminaText);
+        String speedText = Utils.getResourceStringByString(monsterName + "_speed", getApplicationContext());
+        speedTextView.setText("Speed : " + speedText);
+
+        String staminaText = Utils.getResourceStringByString(monsterName + "_stamina", getApplicationContext());
+        staminaTextView.setText("Stamina : " + staminaText);
 
 
     }
