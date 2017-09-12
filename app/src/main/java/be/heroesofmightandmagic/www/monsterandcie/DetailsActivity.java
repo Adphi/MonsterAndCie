@@ -1,52 +1,52 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
 import android.graphics.drawable.Drawable;
-import android.media.Image;
-import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static be.heroesofmightandmagic.www.monsterandcie.R.id.elementTypeLabel;
-import static be.heroesofmightandmagic.www.monsterandcie.R.id.imageView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import static be.heroesofmightandmagic.www.monsterandcie.R.id.editTextLevelValue;
 
 public class DetailsActivity extends AppCompatActivity {
+
+    int monsterLevel = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+
         // Get the Monster Name from the Extra Data of the Intent
         String monsterNameFormated = getIntent().getStringExtra("monsterName");
 
-        String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
+        final String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
-        // TODO: Set the Monster's Data in the Page
-        // In order to get the resource we need to create
-        // the string for the name of the resource image
-
-
-        // In order to get the resource we need to create
-        // the string for the name of the resource image
-        //String monsterResourceName = monsterName + "_evol3";
-
-        // Get the resource ID of the Image to Display
-        //int monsterResourceId = itemView.getResources().getIdentifier(monsterResourceName,
-        //        "drawable", context.getPackageName());
-
-        // Get the Image from Resources with ID
-        //Drawable monsterImage = itemView.getResources().getDrawable(monsterResourceId, context.getTheme());
-
-        // Set the Image
-        //imageView.setImageDrawable(monsterImage);
 
         ImageView evolEggImageView = (ImageView) findViewById(R.id.evolEgg);
         ImageView evol1ImageView = (ImageView) findViewById(R.id.evol1);
         ImageView evol2ImageView = (ImageView) findViewById(R.id.evol2);
         ImageView evol3ImageView = (ImageView) findViewById(R.id.evol3);
-        ImageView charLevelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+        final ImageView charLevelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+
+        // Get the textview
+
+        final TextView powerTextView = (TextView) findViewById(R.id.powerLevelLabel);
+        TextView lifeTextView = (TextView) findViewById(R.id.lifeLevelLabel);
+        TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
+        TextView staminaTextView = (TextView) findViewById(R.id.staminaLevelLabel);
+        TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
 
         //CharacterLevlImage
         Drawable charLevelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
@@ -71,8 +71,6 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Get the Element
 
-
-
         ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
         TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
 
@@ -87,28 +85,33 @@ public class DetailsActivity extends AppCompatActivity {
         elementImageView.setImageDrawable(elementImage);
 
 
-        // Get the textview
-
-        TextView powerTextView = (TextView) findViewById(R.id.powerLevelLabel);
-        TextView lifeTextView = (TextView) findViewById(R.id.lifeLevelLabel);
-        TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
-        TextView staminaTextView = (TextView) findViewById(R.id.staminaLevelLabel);
-        TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
 
         monsterNameTextView.setText(monsterNameFormated);
 
+        // Get JSON Data back
+        String jsonDataString = Utils.getResourceStringByString(monsterName + "_data", getApplicationContext());
 
-        String powerText = Utils.getResourceStringByString(monsterName + "_power", getApplicationContext());
-        powerTextView.setText("Power : " + powerText);
+        // Execption handling for malformed JSON Data
+        try {
+            // Get Data from JSON
+            JSONObject jsonData = new JSONObject(jsonDataString);
 
-        String lifeText = Utils.getResourceStringByString(monsterName + "_life", getApplicationContext());
-        lifeTextView.setText("Life : " + lifeText);
+            // Get Element Values Array
+            JSONArray powerValues = jsonData.getJSONArray("power");
 
-        String speedText = Utils.getResourceStringByString(monsterName + "_speed", getApplicationContext());
-        speedTextView.setText("Speed : " + speedText);
+            // Get Value for the Monster's Level
+            String powerValueBase32 = powerValues.getString(monsterLevel);
 
-        String staminaText = Utils.getResourceStringByString(monsterName + "_stamina", getApplicationContext());
-        staminaTextView.setText("Stamina : " + staminaText);
+            // Decode Data from Base 32 to Base 10
+            String powerValue = Integer.toString(Integer.parseInt(powerValueBase32, 32), 10);
+
+            // Set Value
+
+        }
+        catch (final JSONException e) {
+
+            Log.e("Monsters&Cie", "Json parsing error: " + e.getMessage());
+        }
 
 
     }

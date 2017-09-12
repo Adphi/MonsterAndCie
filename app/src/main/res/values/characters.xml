@@ -6,6 +6,9 @@
     <string name="fire_lion_life">50</string>
     <string name="fire_lion_speed">175</string>
     <string name="fire_lion_stamina">100</string>
+    <string
+        name="fire_lion_data">{"power":["6s","7i","88","8u","9k","aa","b0","bm","cc","d2","do","ee","f4","fp","gg","h6",
+        "hs","ii","j8","ju","kk","la","m0","mm","nc","o2","oo","pe","q4","qq","rg","s5","ss","ti","u8","uu","vj","10a","110","11m","12c","132","13o","14e","154","15q","16g","176","17s","18i","198","19u","1ak","1ba","1c0","1cm","1dc","1e2","1eo","1fe","1g4","1gq","1hg","1i6","1is","1ji","1k8","1ku","1lk","1ma","1n0"],"life":["1i","2h","2m","2t","38","3l","46","4p","5g","69","75","85","98","ad","bm","d1","ef","g1","hm","jd","l8","n5","p5","r9","tg","vp","126","14l","177","19t","1cm","1fh","1ig","1lh","1om","1rt","1v7","22l","266","29p","2dg","2h9","2l6","2p5","2t8","31d","35m","3a1","3eg","3j1","3nl","3sd","418","465","4b6","4g9","4lg","4qp","506","55l","5b8","5gt","5mm","5sh","62f","68h","6em","6kt","6r8","71l","786"],"speed":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"]}</string>
 
     <!-- Panda -->
     <string name="panda_element">Nature</string>
@@ -13,6 +16,8 @@
     <string name="panda_life">56</string>
     <string name="panda_speed">200</string>
     <string name="panda_stamina">100</string>
+    <string name="panda_data">{"power":["5u","6h","74","7n","8a","8t","9g","a3","am","b9","bs","cf","d2",
+        "dk","e8","er","fe","g1","gk","h7","hq","id","j0","jj","k6","kp","lc","lv","mi","n5","no","oa","ou","ph","q4","qn","r9","rt","sg","t3","tm","u8","us","vf","102","10l","118","11r","12e","131","13k","147","14q","15d","160","16j","176","17p","18c","18v","19i","1a5","1ao","1bb","1bu","1ch","1d4","1dn","1ea","1et","1fg"],"life":["1o","2r","30","38","3k","43","4m","5b","65","71","81","94","ab","bl","d2","ej","g7","hv","jp","lo","np","pu","s6","ui","111","13j","169","192","1bu","1eu","1i1","1l8","1oh","1rv","1vf","233","26q","2al","2ej","2ik","2mp","2r1","2vd","33r","38e","3d3","3hs","3mo","3ro","40r","461","4bb","4go","4m8","4rs","51j","57e","5db","5jd","5ph","5vp","664","6cj","6j5","6pq","70j","77f","7ef","7lh","7so","841"],"speed":["68","6s","7g","84","8o","9c","a0","ak","b8","bs","cg","d4","do","eb","f0","fk","g8","gs","hg","i4","io","jc","k0","kk","l8","ls","mg","n4","no","oc","p0","pj","q8","qs","rg","s4","sn","tc","u0","uk","v8","vr","10g","114","11o","12c","130","13k","148","14s","15g","164","16o","17c","180","18k","198","19s","1ag","1b4","1bo","1cc","1d0","1dk","1e8","1es","1fg","1g4","1go","1hc","1i0"]}</string>
 
     <!-- Rockilla -->
     <string name="rockilla_element">Earth</string>
@@ -20,6 +25,7 @@
     <string name="rockilla_life">71</string>
     <string name="rockilla_speed">175</string>
     <string name="rockilla_stamina">100</string>
+    <string name="rockilla_data">{"power":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"],"life":["27","3j","3q","44","4j","56","5u","6p","7p","8u","a6","bj","d4","ep","gj","ig","ki","mp","p3","ri","u5","10s","13o","16o","19s","1d4","1gh","1k2","1nn","1rg","1ve","23g","27m","2c1","2gf","2l2","2pq","2ul","33l","38p","3e1","3je","3ou","3uj","44d","4aa","4gc","4mi","4st","53b","59u","5gl","5nh","5ug","65k","6cs","6k9","6rp","73e","7b8","7j5","7r7","83d","8bn","8k6","8so","95f","9eb","9na","a0e","a9m"],"speed":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"]}</string>
 
     <!-- Thunder Eagle -->
     <string name="thunder_eagle_element">Thunder</string>
@@ -27,6 +33,7 @@
     <string name="thunder_eagle_life">50</string>
     <string name="thunder_eagle_speed">250</string>
     <string name="thunder_eagle_stamina">100</string>
+    <string name="thunder_eagle_data">{"power":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"],"life":["1i","2h","2m","2t","38","3l","46","4p","5g","69","75","85","98","ad","bm","d1","ef","g1","hm","jd","l8","n5","p5","r9","tg","vp","126","14l","177","19t","1cm","1fh","1ig","1lh","1om","1rt","1v7","22l","266","29p","2dg","2h9","2l6","2p5","2t8","31d","35m","3a1","3eg","3j1","3nl","3sd","418","465","4b6","4g9","4lg","4qp","506","55l","5b8","5gt","5mm","5sh","62f","68h","6em","6kt","6r8","71l","786"],"speed":["7q","8j","9c","a5","au","bn","cg","d9","e2","er","fk","gd","h6","hv","io","jh","ka","l3","ls","ml","ne","o7","p0","pp","qi","rb","s4","st","tm","uf","v8","101","10q","11j","12c","135","13u","14n","15g","169","172","17r","18k","19d","1a6","1av","1bo","1ch","1da","1e3","1es","1fl","1ge","1h7","1i0","1ip","1ji","1kb","1l4","1lt","1mm","1nf","1o8","1p1","1pq","1qj","1rc","1s5","1su","1tn","1ug"]}</string>
 
     <!-- Mersnake -->
     <string name="mersnake_element">Water</string>
@@ -34,6 +41,7 @@
     <string name="mersnake_life">56</string>
     <string name="mersnake_speed">200</string>
     <string name="mersnake_stamina">100</string>
+    <string name="mersnake_data">{"power":["71","7n","8e","94","9r","ah","b8","bu","cl","db","e2","eo","ff","g5","gs","hi","i9","iv","jm","kc","l3","lp","mg","n6","nt","oj","pa","q0","qn","rd","s4","sq","th","u7","uu","vk","10b","111","11o","12e","135","13r","14i","158","15v","16l","17c","182","18p","19f","1a6","1as","1bj","1c9","1d0","1dm","1ed","1f3","1fq","1gg","1h7","1ht","1ik","1ja","1k1","1kn","1le","1m4","1mr","1nh","1o8"],"life":["1o","2r","30","38","3k","43","4m","5b","65","71","81","94","ab","bl","d2","ej","g7","hv","jp","lo","np","pu","s6","ui","111","13j","169","192","1bu","1eu","1i1","1l8","1oh","1rv","1vf","233","26q","2al","2ej","2ik","2mp","2r1","2vd","33r","38e","3d3","3hs","3mo","3ro","40r","461","4bb","4go","4m8","4rs","51j","57e","5db","5jd","5ph","5vp","664","6cj","6j5","6pq","70j","77f","7ef","7lh","7so","841"],"speed":["68","6s","7g","84","8o","9c","a0","ak","b8","bs","cg","d4","do","eb","f0","fk","g8","gs","hg","i4","io","jc","k0","kk","l8","ls","mg","n4","no","oc","p0","pj","q8","qs","rg","s4","sn","tc","u0","uk","v8","vr","10g","114","11o","12c","130","13k","148","14s","15g","164","16o","17c","180","18k","198","19s","1ag","1b4","1bo","1cc","1d0","1dk","1e8","1es","1fg","1g4","1go","1hc","1i0"]}</string>
 
     <!-- Tyrannoking -->
     <string name="tyrannoking_element">Dark</string>
@@ -41,6 +49,7 @@
     <string name="tyrannoking_life">50</string>
     <string name="tyrannoking_speed">175</string>
     <string name="tyrannoking_stamina">100</string>
+    <string name="tyrannoking_data">{"power":["76","7t","8k","9b","a2","ap","bg","c7","cu","dl","ec","f3","fq","gh","h8","hv","im","jd","k4","kr","li","m9","n0","nn","oe","p5","ps","qj","ra","s1","so","te","u6","ut","vk","10b","112","11p","12g","137","13u","14l","15c","163","16q","17h","188","18v","19m","1ad","1b4","1br","1ci","1d9","1e0","1en","1fe","1g5","1gs","1hj","1ia","1j1","1jo","1kf","1l6","1lt","1mk","1nb","1o2","1op","1pg"],"life":["1i","2h","2m","2t","38","3l","46","4p","5g","69","75","85","98","ad","bm","d1","ef","g1","hm","jd","l8","n5","p5","r9","tg","vp","126","14l","177","19t","1cm","1fh","1ig","1lh","1om","1rt","1v7","22l","266","29p","2dg","2h9","2l6","2p5","2t8","31d","35m","3a1","3eg","3j1","3nl","3sd","418","465","4b6","4g9","4lg","4qp","506","55l","5b8","5gt","5mm","5sh","62f","68h","6em","6kt","6r8","71l","786"],"speed":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"]}</string>
 
     <!-- Geni -->
     <string name="geni_element">Magic</string>
@@ -48,6 +57,7 @@
     <string name="geni_life">50</string>
     <string name="geni_speed">250</string>
     <string name="geni_stamina">100</string>
+    <string name="geni_data">{"power":["5u","6h","74","7n","8a","8t","9g","a3","am","b9","bs","cf","d2","dk","e8","er","fe","g1","gk","h7","hq","id","j0","jj","k6","kp","lc","lv","mi","n5","no","oa","ou","ph","q4","qn","r9","rt","sg","t3","tm","u8","us","vf","102","10l","118","11r","12e","131","13k","147","14q","15d","160","16j","176","17p","18c","18v","19i","1a5","1ao","1bb","1bu","1ch","1d4","1dn","1ea","1et","1fg"],"life":["1i","2h","2m","2t","38","3l","46","4p","5g","69","75","85","98","ad","bm","d1","ef","g1","hm","jd","l8","n5","p5","r9","tg","vp","126","14l","177","19t","1cm","1fh","1ig","1lh","1om","1rt","1v7","22l","266","29p","2dg","2h9","2l6","2p5","2t8","31d","35m","3a1","3eg","3j1","3nl","3sd","418","465","4b6","4g9","4lg","4qp","506","55l","5b8","5gt","5mm","5sh","62f","68h","6em","6kt","6r8","71l","786"],"speed":["7q","8j","9c","a5","au","bn","cg","d9","e2","er","fk","gd","h6","hv","io","jh","ka","l3","ls","ml","ne","o7","p0","pp","qi","rb","s4","st","tm","uf","v8","101","10q","11j","12c","135","13u","14n","15g","169","172","17r","18k","19d","1a6","1av","1bo","1ch","1da","1e3","1es","1fl","1ge","1h7","1i0","1ip","1ji","1kb","1l4","1lt","1mm","1nf","1o8","1p1","1pq","1qj","1rc","1s5","1su","1tn","1ug"]}</string>
 
     <!-- Light Spirit -->
     <string name="light_spirit_element">Light</string>
@@ -55,6 +65,7 @@
     <string name="light_spirit_life">71</string>
     <string name="light_spirit_speed">175</string>
     <string name="light_spirit_stamina">100</string>
+    <string name="light_spirit_data">{"power":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"],"life":["27","3j","3q","44","4j","56","5u","6p","7p","8u","a6","bj","d4","ep","gj","ig","ki","mp","p3","ri","u5","10s","13o","16o","19s","1d4","1gh","1k2","1nn","1rg","1ve","23g","27m","2c1","2gf","2l2","2pq","2ul","33l","38p","3e1","3je","3ou","3uj","44d","4aa","4gc","4mi","4st","53b","59u","5gl","5nh","5ug","65k","6cs","6k9","6rp","73e","7b8","7j5","7r7","83d","8bn","8k6","8so","95f","9eb","9na","a0e","a9m"],"speed":["5f","60","6i","73","7k","86","8o","99","9r","ac","au","bf","c1","ci","d4","dl","e7","eo","f9","fr","gd","gu","hg","i1","ij","j4","jm","k7","kp","la","ls","md","mv","ng","o2","oj","p4","pm","q8","qp","rb","rs","se","sv","th","u2","uj","v5","vn","108","10q","11b","11t","12e","130","13h","143","14k","156","15n","169","16q","17c","17t","18f","190","19i","1a3","1al","1b6","1bo"]}</string>
 
     <!-- Arch Knight -->
     <string name="arch_knight_element">Legend</string>
@@ -62,6 +73,7 @@
     <string name="arch_knight_life">56</string>
     <string name="arch_knight_speed">200</string>
     <string name="arch_knight_stamina">100</string>
+    <string name="arch_knight_data">{"power":["68","9k","ag","bc","c8","d4","e0","es","fo","gk","hg","ic","j8","k4","l0","ls","mo","nk","og","pc","q8","r4","s0","ss","to","uk","vg","10c","118","124","130","13s","14o","15k","16g","17c","188","194","1a0","1as","1bo","1ck","1dg","1ec","1f8","1g4","1h0","1hs","1io","1jk","1kg","1lc","1m8","1n4","1o0","1os","1po","1qk","1rg","1sc","1t8","1u4","1v0","1vs","20o","21k","22g","23c","248","254","260","26s","27o","28k","29g","2ac","2b8","2c4","2d0","2ds","2eo","2fk","2gg","2hc","2i8","2j4","2k0","2ks","2lo","2mk","2ng","2oc","2p8","2q4","2r0","2rs","2so","2tk","2ug","2vc","308","314","320","32s","33o","34k","35g","36c","378","384","390","39s","3ao","3bk","3cg","3dc","3e8","3f4","3g0","3gs","3ho","3ik","3jg","3kc","3l8","3m4","3n0","3ns","3oo","3pk","3qg"],"life":["1o","3v","46","4h","52","5n","6h","7f","8i","9q","b6","cn","ed","g8","i7","kb","mj","p1","ri","u9","114","144","179","1ai","1e0","1hj","1la","1p6","1t7","21c","25m","2a5","2eo","2jh","2od","2tf","32l","380","3df","3j3","3os","3uq","44s","4b3","4hf","4nv","4uk","55d","5cc","5jf","5qm","623","69k","6h9","6p4","713","797","7hf","7ps","82e","8b4","8jv","8sv","964","9fd","9or","a2d","ac5","am0","b01","ba6","bkg","buv","c9i","cka","cv7","da8","dle","e0p","ec8","ens","f3l","ffi","frl","g7r","gk7","h0n","hdc","hq5","i73","ik6","j1e","jeq","jsb","ka1","knr","l5q","ljt","m26","mgj","mv4","ndr","nsm","obl","oqq","pa3","pph","q93","qoq","r8m","rom","s8r","sp5","t9k","tq7","uav","urr","vct","vu2","10fd","110s","11ig","1249","12m6","1388","13qf","14cq","14va","15hv","164o","16nm"],"speed":["68","9k","ag","bc","c8","d4","e0","es","fo","gk","hg","ic","j8","k4","l0","ls","mo","nk","og","pc","q8","r4","s0","ss","to","uk","vg","10c","118","124","130","13s","14o","15k","16g","17c","188","194","1a0","1as","1bo","1ck","1dg","1ec","1f8","1g4","1h0","1hs","1io","1jk","1kg","1lc","1m8","1n4","1o0","1os","1po","1qk","1rg","1sc","1t8","1u4","1v0","1vs","20o","21k","22g","23c","248","254","260","26s","27o","28k","29g","2ac","2b8","2c4","2d0","2ds","2eo","2fk","2gg","2hc","2i8","2j4","2k0","2ks","2lo","2mk","2ng","2oc","2p8","2q4","2r0","2rs","2so","2tk","2ug","2vc","308","314","320","32s","33o","34k","35g","36c","378","384","390","39s","3ao","3bk","3cg","3dc","3e8","3f4","3g0","3gs","3ho","3ik","3jg","3kc","3l8","3m4","3n0","3ns","3oo","3pk","3qg"]}</string>
 
     <!-- Metalsaur -->
     <string name="metalsaur_element">Metal</string>
@@ -69,4 +81,5 @@
     <string name="metalsaur_life">60</string>
     <string name="metalsaur_speed">200</string>
     <string name="metalsaur_stamina">100</string>
+    <string name="metalsaur_data">{"power":["70","7m","8c","93","9p","ag","b6","bs","cj","d9","e0","em","fc","g3","gp","hg","i6","is","jj","k9","l0","lm","mc","n3","np","og","p6","ps","qj","r9","s0","sm","tc","u3","up","vg","106","10s","11j","129","130","13m","14c","153","15p","16g","176","17s","18j","199","1a0","1am","1bc","1c3","1cp","1dg","1e6","1es","1fj","1g9","1h0","1hm","1ic","1j3","1jp","1kg","1l6","1ls","1mj","1n9","1o0"],"life":["1s","31","37","3g","3s","4c","50","5o","6j","7h","8k","9p","b3","cg","e0","fl","hc","j8","l7","n9","pg","rp","u7","10o","13c","164","190","1c0","1f3","1i9","1lj","1p1","1sj","208","240","27t","2bs","2g0","2k7","2oh","2t0","31h","367","3b0","3fs","3ks","3q0","3v8","44j","4a1","4fk","4l9","4r3","510","570","5d5","5jc","5po","607","66p","6dg","6k9","6r7","728","79c","7gl","7o0","7vg","873","8ep","8mk"],"speed":["68","6s","7g","84","8o","9c","a0","ak","b8","bs","cg","d4","do","eb","f0","fk","g8","gs","hg","i4","io","jc","k0","kk","l8","ls","mg","n4","no","oc","p0","pj","q8","qs","rg","s4","sn","tc","u0","uk","v8","vr","10g","114","11o","12c","130","13k","148","14s","15g","164","16o","17c","180","18k","198","19s","1ag","1b4","1bo","1cc","1d0","1dk","1e8","1es","1fg","1g4","1go","1hc","1i0"]}</string>
 </resources>

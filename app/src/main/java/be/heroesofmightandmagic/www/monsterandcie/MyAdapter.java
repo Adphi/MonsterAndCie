@@ -85,7 +85,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             // In order to get the resource we need to create
             // the string for the name of the resource image
-            String monsterResourceName = monsterName + "_evol3";
+            String monsterResourceName = monsterName + "_card";
 
             // Get the Image from Resources with ID
             Drawable monsterImage = Utils.getResourceDrawableByString(monsterResourceName, context);
@@ -101,6 +101,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             Drawable elementImage = Utils.getResourceDrawableByString(elementImageName, context);
 
             elementImageView.setImageDrawable(elementImage);
+
+
+
         }
     }
     ;
