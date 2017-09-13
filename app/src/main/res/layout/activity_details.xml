@@ -15,15 +15,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="-5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:text="Monster Name"
-<<<<<<< HEAD
         android:textSize="40dp"
-=======
-        android:textSize="30dp"
->>>>>>> 4b75ba4077528d924dba5116c6e1945e9942d41a
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -238,6 +234,7 @@
         android:layout_height="120dp"
         android:layout_marginBottom="7dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
         android:layout_weight="0"
         android:src="@drawable/arch_knight_evol3"
         app:layout_constraintBottom_toBottomOf="parent"
