@@ -1,30 +1,27 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.DrawableContainer;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
-
-import static be.heroesofmightandmagic.www.monsterandcie.R.id.evolutionLevel;
-import static be.heroesofmightandmagic.www.monsterandcie.R.id.monsterName;
 
 public class DetailsActivity extends AppCompatActivity {
 
 
-    int monsterLevel = 0;
+    private float posX1, posX2;
+    private int currentIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +48,9 @@ public class DetailsActivity extends AppCompatActivity {
         TextView powerText = (TextView) findViewById(R.id.textPower);
         powerText.setTypeface(typo);
 
-
-
-
-
-
         // Get the Monster Name from the Extra Data of the Intent
-        String monsterNameFormated = getIntent().getStringExtra("monsterName");
+        currentIndex = getIntent().getIntExtra("monsterNameIndex", 0);
+        String monsterNameFormated = MyAdapter.monstersNameList[currentIndex];
 
         setTitle(monsterNameFormated);
         final String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
@@ -73,8 +66,6 @@ public class DetailsActivity extends AppCompatActivity {
         Drawable rootImag = getResources().getDrawable(rootImage, getTheme());
         rootImag.setAlpha(130);
         root.setBackground(rootImag);
-
-
 
         // Egg
         Drawable evolEggImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
@@ -130,8 +121,6 @@ public class DetailsActivity extends AppCompatActivity {
                 setData(monsterName, newLevel);
             }
         });
-
-
     }
 
     public void setData(String monsterName, int monsterLevel) {
@@ -201,4 +190,38 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch(event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                posX1 = event.getX();
+                break;
+            case MotionEvent.ACTION_UP:
+                posX2 = event.getX();
+                float deltaX = posX2 - posX1;
+                if (deltaX > 0) {
+                    if (currentIndex > 0) {
+                        Intent intent = new Intent(this, DetailsActivity.class);
+                        intent.putExtra("monsterNameIndex", currentIndex - 1);
+                        startActivity(intent);
+                    }
+                }
+                else if (deltaX < 0) {
+                    if (currentIndex < 70) {
+                        Intent intent = new Intent(this, DetailsActivity.class);
+                        intent.putExtra("monsterNameIndex", currentIndex + 1);
+                        startActivity(intent);
+                    }
+                }
+                break;
+        }
+        return super.onTouchEvent(event);
+    }
+    // Back to MainActivity
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

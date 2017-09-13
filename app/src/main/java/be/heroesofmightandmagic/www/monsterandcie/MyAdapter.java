@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     // Create the list of the Monsters names
-    private static final String[] monstersNameList =
+    public static final String[] monstersNameList =
             {"Fire Lion","Panda","Rockilla","Thunder Eagle","Mersnake",
                     "Tyrannoking","Geni","Light Spirit","Arch Knight","Metalsaur"};
 
@@ -77,7 +77,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             String monsterNameFormated = monstersNameList[index];
 
             // Add the Monster Name to the Details Activity
-            intent.putExtra("monsterName", monsterNameFormated);
+            intent.putExtra("monsterNameIndex", index);
 
             String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
