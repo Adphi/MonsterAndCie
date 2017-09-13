@@ -1,5 +1,6 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         final String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
+        setTitle(monsterNameFormated);
 
         ImageView evolEggImageView = (ImageView) findViewById(R.id.evolEgg);
         ImageView evol1ImageView = (ImageView) findViewById(R.id.evol1);
@@ -112,6 +114,7 @@ public class DetailsActivity extends AppCompatActivity {
 
             Log.e("Monsters&Cie", "Json parsing error: " + e.getMessage());
         }
+
 
 
     }
