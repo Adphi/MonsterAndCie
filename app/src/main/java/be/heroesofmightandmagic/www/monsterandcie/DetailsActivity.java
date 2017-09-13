@@ -90,6 +90,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         monsterNameTextView.setText(monsterNameFormated);
 
+        String staminaLevel = Utils.getResourceStringByString(monsterName + "_stamina", getApplicationContext());
+        staminaTextView.setText(staminaLevel);
+
         // Get JSON Data back
         String jsonDataString = Utils.getResourceStringByString(monsterName + "_data", getApplicationContext());
 
@@ -102,24 +105,19 @@ public class DetailsActivity extends AppCompatActivity {
             JSONArray powerValues = jsonData.getJSONArray("power");
 
             // Get Value for the Monster's Level
-            String powerValueBase32 = powerValues.getString(monsterLevel);
-
-            // Decode Data from Base 32 to Base 10
-            String powerValue = Integer.toString(Integer.parseInt(powerValueBase32, 32), 10);
+            String powerValue = powerValues.getString(monsterLevel);
 
             // Set Value
             powerTextView.setText(powerValue);
 
             // Life
             JSONArray lifeValues = jsonData.getJSONArray("life");
-            String lifeValueBase32 = lifeValues.getString(monsterLevel);
-            String lifeValue = Integer.toString(Integer.parseInt(lifeValueBase32, 32), 10);
+            String lifeValue = lifeValues.getString(monsterLevel);
             lifeTextView.setText(lifeValue);
 
             // Speed
             JSONArray speedValues = jsonData.getJSONArray("speed");
-            String speedValueBase32 = speedValues.getString(monsterLevel);
-            String speedValue = Integer.toString(Integer.parseInt(speedValueBase32, 32), 10);
+            String speedValue = speedValues.getString(monsterLevel);
             speedTextView.setText(speedValue);
 
         }
