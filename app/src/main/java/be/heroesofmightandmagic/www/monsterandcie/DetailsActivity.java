@@ -7,6 +7,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -28,7 +29,7 @@ public class DetailsActivity extends AppCompatActivity {
         String monsterNameFormated = getIntent().getStringExtra("monsterName");
 
         setTitle(monsterNameFormated);
-        String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
+        final String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
         // Set the Name
         TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
@@ -82,6 +83,21 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Set Data according to default Level
         setData(monsterName, 0);
+
+        // Level Picker
+        NumberPicker levelPicker = (NumberPicker) findViewById(R.id.levelPicker);
+        levelPicker.setMinValue(0);
+        levelPicker.setMaxValue(70);
+        levelPicker.setWrapSelectorWheel(true);
+
+        levelPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int oldLevel, int newLevel) {
+                setData(monsterName, newLevel);
+            }
+        });
+
+
     }
 
     public void setData(String monsterName, int monsterLevel) {
