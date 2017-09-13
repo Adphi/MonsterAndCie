@@ -2,12 +2,14 @@ package be.heroesofmightandmagic.www.monsterandcie;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by adphi on 07/09/17.
@@ -76,12 +78,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         // The method setting the Monster Image ...
         public void setData(int index){
             // Get the name of the Monster to display in the Card
-            String monsterName = monstersNameList[index];
+            String monsterNameFormated = monstersNameList[index];
 
             // Add the Monster Name to the Details Activity
-            intent.putExtra("monsterName", monsterName);
+            intent.putExtra("monsterName", monsterNameFormated);
 
-            monsterName = monsterName.contains(" ") ? monsterName.replace(" ", "_").toLowerCase() : monsterName.toLowerCase();
+            String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
             // In order to get the resource we need to create
             // the string for the name of the resource image
@@ -101,6 +103,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             Drawable elementImage = Utils.getResourceDrawableByString(elementImageName, context);
 
             elementImageView.setImageDrawable(elementImage);
+
+            TextView cardMonsterName = (TextView) itemView.findViewById(R.id.cardMonsterName);
+            cardMonsterName.setText(monsterNameFormated);
+
+            Typeface typo = Typeface.createFromAsset(context.getAssets(),"fonts/Curse Casual.ttf");
+            cardMonsterName.setTypeface(typo);
+
 
 
 
