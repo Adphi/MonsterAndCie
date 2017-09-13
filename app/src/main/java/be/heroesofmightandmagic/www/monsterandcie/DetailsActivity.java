@@ -75,11 +75,31 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void setData(String monsterName, int monsterLevel) {
 
-        // TODO: Set Monster Image according to the level
+
         //CharacterLevelImage
-        Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
+
+        if (monsterLevel >= 7) {
+        Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
         ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
-        levelImageView.setImageDrawable(levelImage);
+        levelImageView.setImageDrawable(levelImage); }
+
+        else if (monsterLevel >= 4 && monsterLevel <= 6) {
+            Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
+            ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+            levelImageView.setImageDrawable(levelImage); }
+
+
+        else if (monsterLevel >= 1 && monsterLevel <= 3) {
+            Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
+            ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+            levelImageView.setImageDrawable(levelImage); }
+
+        else {
+            Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
+            ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+            levelImageView.setImageDrawable(levelImage); }
+
+
 
         // Get JSON Data back
         String jsonDataString = Utils.getResourceStringByString(monsterName + "_data", getApplicationContext());
