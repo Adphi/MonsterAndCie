@@ -82,6 +82,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="195dp"
         android:text="@string/stats"
@@ -265,5 +267,45 @@
         app:layout_constraintRight_toRightOf="@+id/evolutionLevel"
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/evolutionLevel" />
+
+    <TextView
+        android:id="@+id/textSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textSpeed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedLogo" />
+
+    <TextView
+        android:id="@+id/textLife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="39dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textLife"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lifeLogo" />
+
+    <TextView
+        android:id="@+id/textPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textPower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/powerLogo" />
+
+    <TextView
+        android:id="@+id/textStamina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textStamina"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staminaLogo" />
 
 </android.support.constraint.ConstraintLayout>

@@ -2,5 +2,9 @@
     <string name="app_name">MonsterAndCie</string>
     <string name="elementType"></string>
     <string name="stats">STATS :</string>
+    <string name="textLife">Life</string>
+    <string name="textPower">Power</string>
+    <string name="textStamina">Stamina</string>
+    <string name="textSpeed">Speed</string>
     <string name="levelText">LEVEL</string>
 </resources>
