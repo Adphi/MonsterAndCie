@@ -22,20 +22,15 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-
         // Get the Monster Name from the Extra Data of the Intent
         String monsterNameFormated = getIntent().getStringExtra("monsterName");
 
         setTitle(monsterNameFormated);
+        String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
         // Set the Name
-        TextView monsterNameTextView = (TextView) findViewById(monsterName);
+        TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
         monsterNameTextView.setText(monsterNameFormated);
-
-        //CharacterLevelImage
-        Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
-        ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
-        levelImageView.setImageDrawable(levelImage);
 
         // Egg
         Drawable evolEggImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
@@ -75,11 +70,16 @@ public class DetailsActivity extends AppCompatActivity {
         staminaTextView.setText(staminaLevel);
 
         // Set Data according to default Level
-        setData(monsterNameFormated, 0);
+        setData(monsterName, 0);
     }
 
-    public void setData(String monsterNameFormated, int monsterLevel) {
-        final String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
+    public void setData(String monsterName, int monsterLevel) {
+
+        // TODO: Set Monster Image according to the level
+        //CharacterLevelImage
+        Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
+        ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+        levelImageView.setImageDrawable(levelImage);
 
         // Get JSON Data back
         String jsonDataString = Utils.getResourceStringByString(monsterName + "_data", getApplicationContext());
