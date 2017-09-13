@@ -42,6 +42,14 @@ public class DetailsActivity extends AppCompatActivity {
         lifeTextView.setTypeface(typo);
         TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
         speedTextView.setTypeface(typo);
+        TextView staminaText = (TextView) findViewById(R.id.textStamina);
+        staminaText.setTypeface(typo);
+        TextView speedText = (TextView) findViewById(R.id.textSpeed);
+        speedText.setTypeface(typo);
+        TextView lifeText = (TextView) findViewById(R.id.textLife);
+        lifeText.setTypeface(typo);
+        TextView powerText = (TextView) findViewById(R.id.textPower);
+        powerText.setTypeface(typo);
 
 
 
