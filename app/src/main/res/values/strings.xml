@@ -2,5 +2,5 @@
     <string name="app_name">MonsterAndCie</string>
     <string name="elementType">Type d\'élément</string>
     <string name="stats">STATS</string>
-    <string name="levelText">Niveau</string>
+    <string name="levelText">LEVEL</string>
 </resources>
