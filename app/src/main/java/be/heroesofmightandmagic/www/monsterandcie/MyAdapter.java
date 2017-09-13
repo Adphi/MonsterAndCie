@@ -20,8 +20,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     // Create the list of the Monsters names
     private static final String[] monstersNameList =
             {"Fire Lion","Panda","Rockilla","Thunder Eagle","Mersnake",
-            "Tyrannoking","Geni","Light Spirit","Arch Knight","Metalsaur"};
-
+                    "Tyrannoking","Geni","Light Spirit","Arch Knight","Metalsaur"};
 
     // We need to override this method to know the item's count
     @Override
@@ -47,36 +46,33 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.setData(index);
     }
 
-
-    //
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         // Declaration of Context, ImageView, Intent (to launch
         // the next Activity on Card Clicked)
-        private final Context context;
-        private final ImageView imageView;
         private final Intent intent;
 
         // Constructor of the ViewHolder ()
         public MyViewHolder(View itemView) {
             super(itemView);
+            Context context = itemView.getContext();
             // Get Context in order to access Resources System
-            context = itemView.getContext();
-            // Get the Image View
-            imageView = itemView.findViewById(R.id.monsterImage);
             intent = new Intent(context, DetailsActivity.class);
 
             // Set the Click Listener on the Card to go the Details Avtivity
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    context.startActivity(intent);
+                    view.getContext().startActivity(intent);
                 }
             });
         }
 
         // The method setting the Monster Image ...
         public void setData(int index){
+            // Get The Contex
+            Context context = itemView.getContext();
+
             // Get the name of the Monster to display in the Card
             String monsterNameFormated = monstersNameList[index];
 
@@ -92,12 +88,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             // Get the Image from Resources with ID
             Drawable monsterImage = Utils.getResourceDrawableByString(monsterResourceName, context);
 
+            ImageView imageView = itemView.findViewById(R.id.monsterImage);
+
             // Set the Image
             imageView.setImageDrawable(monsterImage);
 
             ImageView elementImageView = itemView.findViewById(R.id.monsterElementImage);
-            String elementRessourseName = monsterName + "_element";
-            String elementName = Utils.getResourceStringByString(elementRessourseName, context);
+            String elementResourceName = monsterName + "_element";
+            String elementName = Utils.getResourceStringByString(elementResourceName, context);
 
             String elementImageName = elementName.toLowerCase() + "_logo";
             Drawable elementImage = Utils.getResourceDrawableByString(elementImageName, context);
@@ -109,11 +107,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             Typeface typo = Typeface.createFromAsset(context.getAssets(),"fonts/Curse Casual.ttf");
             cardMonsterName.setTypeface(typo);
-
-
-
-
         }
     }
-    ;
 }
