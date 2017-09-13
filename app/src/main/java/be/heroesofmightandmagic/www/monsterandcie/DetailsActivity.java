@@ -36,7 +36,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Set the background
         ConstraintLayout root = (ConstraintLayout) findViewById(R.id.root);
-        int rootImage = getResources().getIdentifier(monsterName + "_card", "drawable", getPackageName());
+        int rootImage = getResources().getIdentifier(monsterName + "_habitat", "drawable", getPackageName());
         Drawable rootImag = getResources().getDrawable(rootImage, getTheme());
         rootImag.setAlpha(130);
         root.setBackground(rootImag);
