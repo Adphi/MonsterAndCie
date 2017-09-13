@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Create the Layout for the RecyclerView to display the Cards
         // ... A Grid Layout, with 2 Columns
-        mLayoutManager = new GridLayoutManager(this, 2);
+        int orientation = getResources().getConfiguration().orientation;
+        int portrait =  getResources().getConfiguration().ORIENTATION_PORTRAIT;
+        if (orientation == portrait) mLayoutManager = new GridLayoutManager(this, 2);
+        else mLayoutManager = new GridLayoutManager(this, 3);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // Set the Custom Adapter
