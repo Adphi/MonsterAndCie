@@ -15,12 +15,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         android:layout_weight="1"
-        android:textColor="@color/colorPrimaryDark"
         android:text="Monster Name"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +31,6 @@
         android:layout_gravity="center"
         android:layout_marginRight="34dp"
         android:layout_marginTop="30dp"
-        android:textColor="@color/colorPrimaryDark"
         android:text="Level"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -45,7 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_column="1"
         android:layout_columnWeight="1"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="42dp"
@@ -90,7 +87,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
         android:textSize="30dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="195dp"
@@ -106,7 +102,7 @@
         android:layout_columnWeight="1"
         android:layout_gravity="center"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="225dp"
         android:layout_row="2"
         android:src="@drawable/stat_speed"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -120,7 +116,7 @@
         android:layout_columnWeight="1"
         android:layout_gravity="center"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="367dp"
+        android:layout_marginTop="355dp"
         android:layout_row="0"
         android:src="@drawable/stat_power"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -134,11 +130,11 @@
         android:layout_columnWeight="1"
         android:layout_gravity="center"
         android:layout_marginLeft="335dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="355dp"
         android:layout_row="3"
         android:src="@drawable/stat_stamina"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelPicker" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/powerLevelLabel"
@@ -147,7 +143,6 @@
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_gravity="center"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_marginLeft="85dp"
         android:layout_marginTop="381dp"
         android:layout_row="0"
@@ -167,7 +162,6 @@
         android:layout_marginRight="88dp"
         android:layout_marginTop="381dp"
         android:layout_row="3"
-        android:textColor="@color/colorPrimaryDark"
         android:text="22"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -182,13 +176,11 @@
         android:layout_columnWeight="1"
         android:layout_gravity="center"
         android:layout_marginLeft="335dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="225dp"
         android:layout_row="1"
         android:src="@drawable/stat_life"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelPicker"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/speedLevelLabel"
@@ -197,12 +189,11 @@
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_gravity="center"
-        android:layout_marginLeft="81dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="248dp"
         android:layout_row="2"
         android:text="22"
         android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -213,10 +204,9 @@
         android:layout_height="wrap_content"
         android:layout_column="1"
         android:layout_columnWeight="1"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center"
-        android:layout_marginRight="88dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginRight="87dp"
+        android:layout_marginTop="248dp"
         android:layout_row="1"
         android:text="22"
         android:textSize="24sp"
@@ -228,51 +218,38 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/evol1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="34dp"
-        android:layout_marginRight="202dp"
-        android:layout_weight="1"
-        android:src="@drawable/arch_knight_evol1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <ImageView
-        android:id="@+id/evolEgg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="35dp"
-        android:layout_marginRight="303dp"
+        android:id="@+id/evolImage1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="301dp"
         android:layout_weight="1"
         android:src="@drawable/arch_knight_egg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
-        android:id="@+id/evol3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="34dp"
-        android:layout_marginLeft="305dp"
+        android:id="@+id/evolImage2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
         android:layout_weight="0"
         android:src="@drawable/arch_knight_evol3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toRightOf="@+id/evolImage1" />
 
     <ImageView
-        android:id="@+id/evol2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="31dp"
-        android:layout_marginRight="102dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/evolImage3"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="25dp"
         android:layout_weight="1"
         android:src="@drawable/arch_knight_evol2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lifeLogo"
-        app:layout_constraintVertical_bias="0.983" />
+        app:layout_constraintLeft_toRightOf="@+id/evolImage2" />
 
     <NumberPicker
         android:id="@+id/levelPicker"
@@ -291,9 +268,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="26dp"
         android:layout_marginTop="8dp"
-        android:textStyle="bold"
         android:text="@string/textSpeed"
-        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedLogo" />
 
@@ -302,9 +277,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="39dp"
-        android:textStyle="bold"
         android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
         android:text="@string/textLife"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lifeLogo" />
@@ -314,9 +287,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="26dp"
-        android:textStyle="bold"
         android:layout_marginTop="8dp"
-        android:textColor="@color/colorPrimaryDark"
         android:text="@string/textPower"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/powerLogo" />
@@ -326,8 +297,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="25dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_marginTop="8dp"
         android:text="@string/textStamina"
         app:layout_constraintRight_toRightOf="parent"

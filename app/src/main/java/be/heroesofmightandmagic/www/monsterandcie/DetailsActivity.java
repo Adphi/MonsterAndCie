@@ -67,26 +67,6 @@ public class DetailsActivity extends AppCompatActivity {
         rootImag.setAlpha(130);
         root.setBackground(rootImag);
 
-        // Egg
-        Drawable evolEggImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
-        ImageView evolEggImageView = (ImageView) findViewById(R.id.evolEgg);
-        evolEggImageView.setImageDrawable(evolEggImage);
-
-        //Evol1
-        ImageView evol1ImageView = (ImageView) findViewById(R.id.evol1);
-        Drawable evol1Image = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
-        evol1ImageView.setImageDrawable(evol1Image);
-
-        //Evol2
-        ImageView evol2ImageView = (ImageView) findViewById(R.id.evol2);
-        Drawable evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
-        evol2ImageView.setImageDrawable(evol2Image);
-
-        //Evol3
-        Drawable evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
-        ImageView evol3ImageView = (ImageView) findViewById(R.id.evol3);
-        evol3ImageView.setImageDrawable(evol3Image);
-
         // Get the Element
         ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
         TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
@@ -128,28 +108,62 @@ public class DetailsActivity extends AppCompatActivity {
 
         //CharacterLevelImage
 
+        Drawable evol1Image;
+        Drawable evol2Image;
+        Drawable evol3Image;
+
         if (monsterLevel >= 7) {
-        Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
-        ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
-        levelImageView.setImageDrawable(levelImage); }
+            Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
+            ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
+            levelImageView.setImageDrawable(levelImage);
+            evol1Image = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
+            evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
+            evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
+
+
+        }
 
         else if (monsterLevel >= 4 && monsterLevel <= 6) {
             Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
             ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
-            levelImageView.setImageDrawable(levelImage); }
+            levelImageView.setImageDrawable(levelImage);
+            evol1Image = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
+            evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
+            evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
+
+        }
 
 
         else if (monsterLevel >= 1 && monsterLevel <= 3) {
             Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
             ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
-            levelImageView.setImageDrawable(levelImage); }
+            levelImageView.setImageDrawable(levelImage);
+            evol1Image = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
+            evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
+            evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
+        }
 
         else {
             Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
             ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
-            levelImageView.setImageDrawable(levelImage); }
+            levelImageView.setImageDrawable(levelImage);
+            evol1Image = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
+            evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
+            evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
+        }
 
 
+        //Evol1
+        ImageView evol1ImageView = (ImageView) findViewById(R.id.evolImage1);
+        evol1ImageView.setImageDrawable(evol1Image);
+
+        //Evol2
+        ImageView evol2ImageView = (ImageView) findViewById(R.id.evolImage2);
+        evol2ImageView.setImageDrawable(evol2Image);
+
+        //Evol3
+        ImageView evol3ImageView = (ImageView) findViewById(R.id.evolImage3);
+        evol3ImageView.setImageDrawable(evol3Image);
 
         // Get JSON Data back
         String jsonDataString = Utils.getResourceStringByString(monsterName + "_data", getApplicationContext());
