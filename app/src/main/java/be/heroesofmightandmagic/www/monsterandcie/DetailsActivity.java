@@ -68,7 +68,7 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView elementImageView = (ImageView) findViewById(R.id.elementTypeLogo);
         TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
         String elementText = Utils.getResourceStringByString(monsterName + "_element", getApplicationContext());
-        elementTextView.setText("Type : " + elementText);
+        elementTextView.setText(elementText);
 
         String elementRessourceName = elementText;
         elementRessourceName = elementRessourceName.toLowerCase() + "_logo";
