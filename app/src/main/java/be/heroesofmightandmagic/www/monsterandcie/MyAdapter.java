@@ -102,6 +102,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             elementImageView.setImageDrawable(elementImage);
 
+            // TYPO
             TextView cardMonsterName = (TextView) itemView.findViewById(R.id.cardMonsterName);
             cardMonsterName.setText(monsterNameFormated);
 

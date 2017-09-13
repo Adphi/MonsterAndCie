@@ -1,7 +1,9 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.DrawableContainer;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
@@ -31,6 +33,15 @@ public class DetailsActivity extends AppCompatActivity {
         // Set the Name
         TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
         monsterNameTextView.setText(monsterNameFormated);
+
+        // Set the background
+        ConstraintLayout root = (ConstraintLayout) findViewById(R.id.root);
+        int rootImage = getResources().getIdentifier(monsterName + "_card", "drawable", getPackageName());
+        Drawable rootImag = getResources().getDrawable(rootImage, getTheme());
+        rootImag.setAlpha(130);
+        root.setBackground(rootImag);
+
+
 
         // Egg
         Drawable evolEggImage = Utils.getResourceDrawableByString(monsterName + "_egg", getApplicationContext());
