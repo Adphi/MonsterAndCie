@@ -108,6 +108,19 @@ public class DetailsActivity extends AppCompatActivity {
             String powerValue = Integer.toString(Integer.parseInt(powerValueBase32, 32), 10);
 
             // Set Value
+            powerTextView.setText(powerValue);
+
+            // Life
+            JSONArray lifeValues = jsonData.getJSONArray("life");
+            String lifeValueBase32 = lifeValues.getString(monsterLevel);
+            String lifeValue = Integer.toString(Integer.parseInt(lifeValueBase32, 32), 10);
+            lifeTextView.setText(lifeValue);
+
+            // Speed
+            JSONArray speedValues = jsonData.getJSONArray("speed");
+            String speedValueBase32 = speedValues.getString(monsterLevel);
+            String speedValue = Integer.toString(Integer.parseInt(speedValueBase32, 32), 10);
+            speedTextView.setText(speedValue);
 
         }
         catch (final JSONException e) {
