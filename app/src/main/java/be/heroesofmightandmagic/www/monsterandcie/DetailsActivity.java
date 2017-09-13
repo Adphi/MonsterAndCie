@@ -1,11 +1,14 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.DrawableContainer;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
@@ -13,10 +16,13 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
+import static be.heroesofmightandmagic.www.monsterandcie.R.id.evolutionLevel;
 import static be.heroesofmightandmagic.www.monsterandcie.R.id.monsterName;
 
 public class DetailsActivity extends AppCompatActivity {
+
 
     int monsterLevel = 0;
 
@@ -24,6 +30,23 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        //Set the custom TYPO
+        Typeface typo = Typeface.createFromAsset(getAssets(),"fonts/Curse Casual.ttf");
+
+        TextView evolutionLevel = (TextView) findViewById(R.id.evolutionLevel);
+        evolutionLevel.setTypeface(typo);
+        TextView statLabel = (TextView) findViewById(R.id.statsLabel);
+        statLabel.setTypeface(typo);
+        TextView lifeTextView = (TextView) findViewById(R.id.lifeLevelLabel);
+        lifeTextView.setTypeface(typo);
+        TextView speedTextView = (TextView) findViewById(R.id.speedLevelLabel);
+        speedTextView.setTypeface(typo);
+
+
+
+
+
 
         // Get the Monster Name from the Extra Data of the Intent
         String monsterNameFormated = getIntent().getStringExtra("monsterName");
@@ -34,6 +57,7 @@ public class DetailsActivity extends AppCompatActivity {
         // Set the Name
         TextView monsterNameTextView = (TextView) findViewById(R.id.monsterName);
         monsterNameTextView.setText(monsterNameFormated);
+        monsterNameTextView.setTypeface(typo);
 
         // Set the background
         ConstraintLayout root = (ConstraintLayout) findViewById(R.id.root);
@@ -69,6 +93,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView elementTextView = (TextView) findViewById(R.id.elementTypeLabel);
         String elementText = Utils.getResourceStringByString(monsterName + "_element", getApplicationContext());
         elementTextView.setText(elementText);
+        elementTextView.setTypeface(typo);
 
         String elementRessourceName = elementText;
         elementRessourceName = elementRessourceName.toLowerCase() + "_logo";
@@ -80,6 +105,7 @@ public class DetailsActivity extends AppCompatActivity {
         String staminaLevel = Utils.getResourceStringByString(monsterName + "_stamina", getApplicationContext());
         TextView staminaTextView = (TextView) findViewById(R.id.staminaLevelLabel);
         staminaTextView.setText(staminaLevel);
+        staminaTextView.setTypeface(typo);
 
         // Set Data according to default Level
         setData(monsterName, 0);
@@ -166,4 +192,5 @@ public class DetailsActivity extends AppCompatActivity {
             Log.e("Monsters&Cie", "Json parsing error: " + e.getMessage());
         }
     }
+
 }
