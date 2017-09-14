@@ -105,6 +105,11 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Method updating Data in the layout according to the level
+     * @param monsterName
+     * @param monsterLevel
+     */
     public void setData(String monsterName, int monsterLevel) {
 
         //CharacterLevelImage
