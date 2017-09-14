@@ -1,14 +1,16 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
+    // BackButton pressed counter
+    private int backButtonCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,13 +18,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the RecyclerView from Resource System
-        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         // Stuff from Android doc to improve performances
         mRecyclerView.setHasFixedSize(true);
 
         // Create the Layout for the RecyclerView to display the Cards
         // ... A Grid Layout, with 2 Columns
+        RecyclerView.LayoutManager mLayoutManager;
         int orientation = getResources().getConfiguration().orientation;
         int portrait =  getResources().getConfiguration().ORIENTATION_PORTRAIT;
         if (orientation == portrait) mLayoutManager = new GridLayoutManager(this, 2);
@@ -31,5 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the Custom Adapter
         mRecyclerView.setAdapter(new MyAdapter());
+    }
+    // Exit on Back pressed twice else toast
+    @Override
+    public void onBackPressed() {
+        if(backButtonCount > 0) {
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_HOME);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else {
+            Toast.makeText(this, getString(R.string.mainBackPressedMessage), Toast.LENGTH_SHORT).show();
+            backButtonCount++;
+        }
     }
 }
