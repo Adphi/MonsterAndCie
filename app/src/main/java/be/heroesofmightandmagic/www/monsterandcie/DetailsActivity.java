@@ -17,10 +17,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class DetailsActivity extends AppCompatActivity {
 
     private int currentIndex;
-    private float swipeStartPos, swipeEndPos;
+    private float swipeStartPos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,9 +106,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     public void setData(String monsterName, int monsterLevel) {
 
-
         //CharacterLevelImage
-
         Drawable evol1Image;
         Drawable evol2Image;
         Drawable evol3Image;
@@ -132,7 +132,6 @@ public class DetailsActivity extends AppCompatActivity {
 
         }
 
-
         else if (monsterLevel >= 1 && monsterLevel <= 3) {
             Drawable levelImage = Utils.getResourceDrawableByString(monsterName + "_evol1", getApplicationContext());
             ImageView levelImageView = (ImageView) findViewById(R.id.characterLevelImage);
@@ -150,7 +149,6 @@ public class DetailsActivity extends AppCompatActivity {
             evol2Image = Utils.getResourceDrawableByString(monsterName + "_evol2", getApplicationContext());
             evol3Image = Utils.getResourceDrawableByString(monsterName + "_evol3", getApplicationContext());
         }
-
 
         //Evol1
         ImageView evol1ImageView = (ImageView) findViewById(R.id.evolImage1);
@@ -206,24 +204,25 @@ public class DetailsActivity extends AppCompatActivity {
     // Swipe Detection and Animation
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        int monstersNameListLength = MyAdapter.monstersNameList.length;
         switch(event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 swipeStartPos = event.getX();
                 break;
             case MotionEvent.ACTION_UP:
                 float deltaMIN = 450f;
-                swipeEndPos = event.getX();
+                float swipeEndPos = event.getX();
                 float swipeDelta = swipeEndPos - swipeStartPos;
                 Log.e("Gesture", "onTouchEvent: " + String.valueOf(swipeDelta));
-                if (swipeDelta > deltaMIN && currentIndex > 0) {
+                if (swipeDelta > deltaMIN) {
                     Intent intent = new Intent(this, DetailsActivity.class);
-                    intent.putExtra("monsterNameIndex", currentIndex - 1);
+                    intent.putExtra("monsterNameIndex", currentIndex - 1 >= 0 ? currentIndex - 1 : monstersNameListLength - 1);
                     startActivity(intent);
                     overridePendingTransition(R.anim.enter_left, R.anim.out_right);
                 }
-                else if (swipeDelta < -deltaMIN && currentIndex < MyAdapter.monstersNameList.length - 1) {
+                else if (swipeDelta < -deltaMIN) {
                     Intent intent = new Intent(this, DetailsActivity.class);
-                    intent.putExtra("monsterNameIndex", currentIndex + 1);
+                    intent.putExtra("monsterNameIndex", (currentIndex + 1) % monstersNameListLength);
                     startActivity(intent);
                     overridePendingTransition(R.anim.enter_right, R.anim.out_left);
                 }
@@ -238,5 +237,6 @@ public class DetailsActivity extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.enter_left, R.anim.out_right);
     }
 }

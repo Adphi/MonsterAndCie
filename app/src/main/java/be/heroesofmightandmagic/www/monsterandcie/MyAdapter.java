@@ -1,5 +1,6 @@
 package be.heroesofmightandmagic.www.monsterandcie;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -17,10 +18,17 @@ import android.widget.TextView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
+    // Reference from Owner Activity
+    Activity mActivity;
+
     // Create the list of the Monsters names
     public static final String[] monstersNameList =
             {"Fire Lion","Panda","Rockilla","Thunder Eagle","Mersnake",
                     "Tyrannoking","Geni","Light Spirit","Arch Knight","Metalsaur"};
+
+    public MyAdapter(Activity activity) {
+        this.mActivity = activity;
+    }
 
     // We need to override this method to know the item's count
     @Override
@@ -53,9 +61,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         private final Intent intent;
 
         // Constructor of the ViewHolder ()
-        public MyViewHolder(View itemView) {
+        public MyViewHolder(final View itemView) {
             super(itemView);
-            Context context = itemView.getContext();
+            final Context context = itemView.getContext();
             // Get Context in order to access Resources System
             intent = new Intent(context, DetailsActivity.class);
 
@@ -63,7 +71,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    view.getContext().startActivity(intent);
+                    context.startActivity(intent);
+                    mActivity.overridePendingTransition(R.anim.enter_right, R.anim.out_left);
                 }
             });
         }

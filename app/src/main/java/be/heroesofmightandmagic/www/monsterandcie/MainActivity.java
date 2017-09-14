@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // Set the Custom Adapter
-        mRecyclerView.setAdapter(new MyAdapter());
+        mRecyclerView.setAdapter(new MyAdapter(this));
     }
     // Exit on Back pressed twice else toast
     @Override
