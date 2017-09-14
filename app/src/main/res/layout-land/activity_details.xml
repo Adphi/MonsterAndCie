@@ -8,6 +8,7 @@
     tools:context="be.heroesofmightandmagic.www.monsterandcie.DetailsActivity">
 
     <ScrollView
+        android:id="@+id/scrollViewLand"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
