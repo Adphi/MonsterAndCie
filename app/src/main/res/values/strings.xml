@@ -7,4 +7,5 @@
     <string name="textSpeed">Speed</string>
     <string name="stats">STATISTIQUES :</string>
     <string name="levelText">LEVEL</string>
+    <string name="mainBackPressedMessage">Press the back button once again to close the application.</string>
 </resources>
