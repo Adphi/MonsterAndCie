@@ -213,14 +213,14 @@ public class DetailsActivity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 posX2 = event.getX();
                 float deltaX = posX2 - posX1;
-                if (deltaX > 0) {
+                if (deltaX > 100) {
                     if (currentIndex > 0) {
                         Intent intent = new Intent(this, DetailsActivity.class);
                         intent.putExtra("monsterNameIndex", currentIndex - 1);
                         startActivity(intent);
                     }
                 }
-                else if (deltaX < 0) {
+                else if (deltaX < 100) {
                     if (currentIndex < 70) {
                         Intent intent = new Intent(this, DetailsActivity.class);
                         intent.putExtra("monsterNameIndex", currentIndex + 1);
