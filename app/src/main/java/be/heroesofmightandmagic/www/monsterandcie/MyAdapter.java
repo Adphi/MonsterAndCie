@@ -65,7 +65,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             super(itemView);
             final Context context = itemView.getContext();
             // Get Context in order to access Resources System
-            intent = new Intent(context, DetailsActivity.class);
+            intent = new Intent(context, ViewPagerFragment.class);
 
             // Set the Click Listener on the Card to go the Details Avtivity
             itemView.setOnClickListener(new View.OnClickListener() {
