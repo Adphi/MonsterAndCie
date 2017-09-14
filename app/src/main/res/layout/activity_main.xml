@@ -7,8 +7,7 @@
     android:orientation="vertical"
     tools:context="be.heroesofmightandmagic.www.monsterandcie.MainActivity"
     tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="8dp"
-    android:background="@color/background">
+    tools:layout_editor_absoluteY="8dp">
 
     <ImageView
         android:id="@+id/imageView"
