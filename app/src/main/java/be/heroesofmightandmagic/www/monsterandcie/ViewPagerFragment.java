@@ -9,18 +9,14 @@ import android.support.v7.app.AppCompatActivity;
 
 public class ViewPagerFragment extends AppCompatActivity {
 
-    SectionsPagerAdapter mSectionsPagerAdapter;
-
-    ViewPager mViewPager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_pager);
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        mViewPager = (ViewPager) findViewById(R.id.pager);
+        ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         int currentIndex = getIntent().getIntExtra("monsterNameIndex", 0);
         mViewPager.setCurrentItem(currentIndex);
