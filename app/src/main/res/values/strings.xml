@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MonsterAndCie</string>
-    <string name="press_logo">Touch Screen</string>
+    <string name="press_logo">Touch the screen to enter</string>
     <string name="elementType"></string>
     <string name="textLife">Life</string>
     <string name="textPower">Power</string>
