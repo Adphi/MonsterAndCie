@@ -19,7 +19,6 @@ public class ViewPagerActivity extends AppCompatActivity {
         ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         int currentIndex = getIntent().getIntExtra("monsterNameIndex", 0);
-        setTitle(MyAdapter.monstersNameList[currentIndex]);
         mViewPager.setCurrentItem(currentIndex);
     }
 
