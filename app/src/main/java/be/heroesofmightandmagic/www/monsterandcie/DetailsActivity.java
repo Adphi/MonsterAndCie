@@ -19,9 +19,8 @@ import org.json.JSONObject;
 
 public class DetailsActivity extends AppCompatActivity {
 
-
-    private float posX1, posX2;
     private int currentIndex;
+    private float swipeStartPos, swipeEndPos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -204,33 +203,35 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
 
+    // Swipe Detection and Animation
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch(event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                posX1 = event.getX();
+                swipeStartPos = event.getX();
                 break;
             case MotionEvent.ACTION_UP:
-                posX2 = event.getX();
-                float deltaX = posX2 - posX1;
-                if (deltaX > 100) {
-                    if (currentIndex > 0) {
-                        Intent intent = new Intent(this, DetailsActivity.class);
-                        intent.putExtra("monsterNameIndex", currentIndex - 1);
-                        startActivity(intent);
-                    }
+                float deltaMIN = 450f;
+                swipeEndPos = event.getX();
+                float swipeDelta = swipeEndPos - swipeStartPos;
+                Log.e("Gesture", "onTouchEvent: " + String.valueOf(swipeDelta));
+                if (swipeDelta > deltaMIN && currentIndex > 0) {
+                    Intent intent = new Intent(this, DetailsActivity.class);
+                    intent.putExtra("monsterNameIndex", currentIndex - 1);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.enter_left, R.anim.out_right);
                 }
-                else if (deltaX < 100) {
-                    if (currentIndex < 70) {
-                        Intent intent = new Intent(this, DetailsActivity.class);
-                        intent.putExtra("monsterNameIndex", currentIndex + 1);
-                        startActivity(intent);
-                    }
+                else if (swipeDelta < -deltaMIN && currentIndex < MyAdapter.monstersNameList.length - 1) {
+                    Intent intent = new Intent(this, DetailsActivity.class);
+                    intent.putExtra("monsterNameIndex", currentIndex + 1);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.enter_right, R.anim.out_left);
                 }
                 break;
         }
         return super.onTouchEvent(event);
     }
+
     // Back to MainActivity
     @Override
     public void onBackPressed() {
