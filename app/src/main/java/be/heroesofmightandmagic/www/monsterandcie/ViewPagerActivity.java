@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-public class ViewPagerFragment extends AppCompatActivity {
+public class ViewPagerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class ViewPagerFragment extends AppCompatActivity {
         ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         int currentIndex = getIntent().getIntExtra("monsterNameIndex", 0);
+        setTitle(MyAdapter.monstersNameList[currentIndex]);
         mViewPager.setCurrentItem(currentIndex);
     }
 

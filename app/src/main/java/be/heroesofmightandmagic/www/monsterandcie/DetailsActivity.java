@@ -55,7 +55,6 @@ public class DetailsActivity extends Fragment {
         int monsterNameIndex = Integer.valueOf(getArguments().getInt(MONSTERNAME_INDEX));
         String monsterNameFormated = MyAdapter.monstersNameList[monsterNameIndex];
 
-        getActivity().setTitle(monsterNameFormated);
         final String monsterName = monsterNameFormated.contains(" ") ? monsterNameFormated.replace(" ", "_").toLowerCase() : monsterNameFormated.toLowerCase();
 
         // Set the Name
