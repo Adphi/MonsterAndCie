@@ -19,6 +19,7 @@
         android:layout_marginTop="30dp"
         android:layout_weight="1"
         android:text="Monster Name"
+        android:textColor="@color/colorPrimary"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -34,6 +35,7 @@
         android:text="Level"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,6 +52,7 @@
         android:text="@string/elementType"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toRightOf="@+id/elementTypeLogo"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,6 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         android:textSize="30dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="195dp"
@@ -152,6 +156,7 @@
         android:text="22"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSpeed" />
 
@@ -168,6 +173,7 @@
         android:text="22"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,6 +187,7 @@
         android:layout_marginLeft="284dp"
         android:layout_marginTop="240dp"
         android:layout_row="1"
+        android:textColor="@color/colorPrimary"
         android:src="@drawable/stat_life"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -200,6 +207,7 @@
         android:text="22"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -215,6 +223,7 @@
         android:text="22"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/lifeLogo"
         android:layout_marginRight="8dp"
@@ -272,6 +281,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textSpeed"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="0dp"
         app:layout_constraintTop_toBottomOf="@+id/speedLevelLabel"
         app:layout_constraintLeft_toRightOf="@+id/speedLogo"
@@ -282,6 +292,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textLife"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintLeft_toRightOf="@+id/textSpeed"
         android:layout_marginLeft="8dp"
         app:layout_constraintRight_toLeftOf="@+id/lifeLogo"
@@ -295,6 +306,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textPower"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="0dp"
         app:layout_constraintTop_toBottomOf="@+id/powerLevelLabel"
         app:layout_constraintLeft_toRightOf="@+id/powerLogo"
@@ -305,6 +317,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textStamina"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintRight_toLeftOf="@+id/staminaLogo"
         android:layout_marginRight="13dp"
         android:layout_marginTop="0dp"

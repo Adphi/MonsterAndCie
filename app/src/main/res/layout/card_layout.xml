@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
             android:gravity="center"
             android:shadowColor="@color/textShadow"
@@ -54,12 +55,11 @@
             android:shadowDy="5"
             android:shadowRadius="20"
             android:text="Monster Name"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="40sp"
             android:typeface="normal"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintRight_toRightOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
 
