@@ -22,9 +22,6 @@ public class DetailsFragment extends Fragment {
     public static String MONSTERNAME_INDEX;
     private View rootView;
 
-    public DetailsFragment() {
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                             Bundle savedInstanceState) {

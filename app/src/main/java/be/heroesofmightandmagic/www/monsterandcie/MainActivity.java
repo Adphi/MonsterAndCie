@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     // BackButton pressed counter
-    private int backButtonCount = 0;
+    private int backButtonCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         // Set the Custom Adapter
         mRecyclerView.setAdapter(new MyAdapter(this));
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backButtonCount = 0;
+    }
+
     // Exit on Back pressed twice else toast
     @Override
     public void onBackPressed() {
