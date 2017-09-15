@@ -5,7 +5,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="be.heroesofmightandmagic.www.monsterandcie.DetailsActivity">
+    tools:context="be.heroesofmightandmagic.www.monsterandcie.DetailsFragment">
 
     <ScrollView
         android:id="@+id/scrollViewLand"

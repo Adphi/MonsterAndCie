@@ -30,9 +30,9 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            Fragment fragment = new DetailsActivity();
+            Fragment fragment = new DetailsFragment();
             Bundle args = new Bundle();
-            args.putInt(DetailsActivity.MONSTERNAME_INDEX, position);
+            args.putInt(DetailsFragment.MONSTERNAME_INDEX, position);
             fragment.setArguments(args);
             return fragment;
         }

@@ -17,12 +17,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class DetailsActivity extends Fragment {
+public class DetailsFragment extends Fragment {
 
     public static String MONSTERNAME_INDEX;
     private View rootView;
 
-    public DetailsActivity() {
+    public DetailsFragment() {
     }
 
     @Override
